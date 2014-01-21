@@ -38,10 +38,10 @@ convert -delay 32 -loop 0 ${CAPTURE_SCREENSHOT_DIR}*.png $CAPTURE_RESULT_GIF;
 ```
 
 * change the 4 config variables
-..* CAPTURE_JS_PATH - where this repo's capture.js is
-..* CAPTURE_URL - the absolute public accessible URL of your website
-..* CAPTURE_SCREENSHOT_DIR - the folder to save the screenshots into (not /tmp/*), it should be permanent
-..* CAPTURE_RESULT_GIF - the file path for the result gif
+  * CAPTURE_JS_PATH - where this repo's capture.js is
+  * CAPTURE_URL - the absolute public accessible URL of your website
+  * CAPTURE_SCREENSHOT_DIR - the folder to save the screenshots into (not /tmp/*), it should be permanent
+  * CAPTURE_RESULT_GIF - the file path for the result gif
 * make sure if the pre-commit file is executable
 
 ```shell
@@ -49,4 +49,4 @@ chmod u+x .git/hooks/pre-commit
 ```
 
 * make a change on your project and commit it
-..* you should see a screenshot and a generated gif file
+  * you should see a screenshot and a generated gif file
