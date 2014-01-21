@@ -1,10 +1,17 @@
-var system = require('system');
-if (system.args.length !== 3) {
-  console.log('Missing argument: [1:] absolute URL [2:] name.');
-}
+/**
+ * @file
+ * PhantomJS script to virtually open the page and save a screenshot.
+ */
 
+// Load system module to handle arguments.
+var system = require('system');
+// Load page module for opening the URL.
 var page = require('webpage').create();
+
+// Open URL.
 page.open(system.args[1], function() {
-  page.render('screenshot/' + system.args[2] + '_' + (new Date()).getTime() + '.png');
+  // Save screenshot.
+  page.render(system.args[2] + (new Date()).getTime() + '.png');
+  // Finish.
   phantom.exit();
 });

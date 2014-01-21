@@ -1,0 +1,17 @@
+#########################################################
+# Pre-commit hook script to add to your pre-commit file.
+
+# Configuration:
+CAPTURE_JS_PATH=<PATH_TO_CAPTURE>/capture/capture.js
+CAPTURE_URL=http://<WEBSITE_URL>
+CAPTURE_SCREENSHOT_DIR=<FOLDER_TO_STORE_SCREENSHOTS>/
+CAPTURE_RESULT_GIF=<PATH_TO_SAVE_RESULT>/result.gif
+
+# Generate screenshot.
+phantomjs $CAPTURE_JS_PATH $CAPTURE_URL $CAPTURE_SCREENSHOT_DIR;
+
+# Create GIF animation.
+convert -delay 32 -loop 0 ${CAPTURE_SCREENSHOT_DIR}*.png $CAPTURE_RESULT_GIF;
+#########################################################
+
+exit 0
