@@ -2,6 +2,8 @@
 
 Have you ever wanted to see how a design is evolving? Looking at every single improvement you applied on a website? With this little tool you can capture the whole flow in a GIF animation.
 
+![Example](https://dl.dropboxusercontent.com/u/2629592/result.gif "Silly example")
+
 
 Requirements
 ------------
@@ -34,3 +36,17 @@ phantomjs $CAPTURE_JS_PATH $CAPTURE_URL $CAPTURE_SCREENSHOT_DIR;
 convert -delay 32 -loop 0 ${CAPTURE_SCREENSHOT_DIR}*.png $CAPTURE_RESULT_GIF;
 #########################################################
 ```
+
+* change the 4 config variables
+..* CAPTURE_JS_PATH - where this repo's capture.js is
+..* CAPTURE_URL - the absolute public accessible URL of your website
+..* CAPTURE_SCREENSHOT_DIR - the folder to save the screenshots into (not /tmp/*), it should be permanent
+..* CAPTURE_RESULT_GIF - the file path for the result gif
+* make sure if the pre-commit file is executable
+
+```shell
+chmod u+x .git/hooks/pre-commit
+```
+
+* make a change on your project and commit it
+..* you should see a screenshot and a generated gif file
