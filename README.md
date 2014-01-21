@@ -1,6 +1,6 @@
 # Capture
 
-Have you ever wanted to see how a design is evolving? Looking at every single improvement you applied on a website? With this little tool you can capture the whole flow in a GIF animation.
+Have you ever wanted to see how a design is evolving? Looking at every single improvement you applied on a website? With this little tool you can capture the whole flow in a GIF.
 
 ![Example](https://dl.dropboxusercontent.com/u/2629592/result.gif "Silly example")
 
@@ -9,6 +9,11 @@ Requirements
 ------------
 
 * PhantomJS (http://phantomjs.org/download.html)
+* convert (part of ImageMagick)
+
+```shell
+brew install imagemagick
+````
 
 Currently only tested on OS-X.
 
